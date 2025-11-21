@@ -5,7 +5,7 @@ function SideBar(props) {
    
      <div>
         <h1>ROLES</h1>
-        <p>{props.usuario}</p>
+        <p>{props.menu}</p>
      </div>
     
   )

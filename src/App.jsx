@@ -26,7 +26,7 @@ function App() {
             <SideBar menu={menu}/>
           </div>
           <div className='col-9 main'>
-            <Main token={token}/>
+            <Main token={token} />
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ function Cabecera(props) {
     <>
       <header>
             <h1>HEADER</h1>
+            <p>{props.usuario}</p>
       </header>
     </>
   )
