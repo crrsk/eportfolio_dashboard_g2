@@ -1,38 +1,22 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import Cabecera from './componentes/Cabecera'
-import SideBar from './componentes/SideBar'
-import Main from './componentes/Main'
+import Boton from './componentes/Boton'
+import NotaForm from './componentes/NotaForm'
 
 function App() {
-
- const usuario="Enrique"
- const token="dada78wda7w"
- const menu="menu"
-
-
+  let estado=0
 
   return (
-    <>
-      <div className='container-fluid'>
-        <div className="row">
-
-          <div className='col-12 cabecera'>
-            <Cabecera usuario={usuario}/>
-          </div>
-         <div className='col-3 sideBar'>
-            <SideBar menu={menu}/>
-          </div>
-          <div className='col-9 main'>
-            <Main token={token}/>
-          </div>
-        </div>
-      </div>
+    
+    <div>
+      <h1>Notas</h1>
+      <Boton estado={estado}></Boton>
+      <NotaForm></NotaForm>
+    </div>
       
       
-    </>
+    
   )
 }
 

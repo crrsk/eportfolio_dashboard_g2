@@ -11,6 +11,15 @@
   min-height: 1500px;
 
 }
+.BTrojo{
+  background-color: red;
+}
+.BTamarillo{
+  background-color: yellow;
+}
+.BTverde{
+  background-color: green;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -45,4 +54,8 @@
 
 .read-the-docs {
   color: #888;
+}
+body{
+  text-align: center;
+  font-size: 30px;
 }
