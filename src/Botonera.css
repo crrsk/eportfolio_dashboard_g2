@@ -1,0 +1,16 @@
+.rojo{
+    background-color: red;
+}
+
+.verde{
+    background-color: green;
+}
+.amarillo{
+    background-color: yellow;
+}
+
+.botonera {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+  gap: 10px;  /* separación entre botones */
+}
