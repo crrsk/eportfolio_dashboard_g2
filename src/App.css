@@ -1,13 +1,15 @@
-
+h1,p{
+   text-align: center;
+}
 .cabecera{
   background-color: #888;
 }
 .sideBar{
-  background-color: blue;
+  background-color: rgb(132, 132, 221);
   min-height: 1500px;
 }
 .main{
-  background-color: lime;
+  background-color: rgb(121, 201, 121);
   min-height: 1500px;
 
 }
