@@ -7,6 +7,7 @@ import SideBar from './componentes/SideBar'
 import Main from './componentes/Main'
 import TokenContext from './contexto/TokenContext'
 import UserContext from './contexto/UserContext'
+import NuevaEvidencia from './componentes/nuevaEvidencia/NuevaEvidencia'
 function App() {
 
  const usuario="Enrique"
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-    <TokenContext value={token}>
+{/*     <TokenContext value={token}>
       <div className='container-fluid'>
         <div className="row">
 
@@ -32,11 +33,12 @@ function App() {
             <Main token={token} />
           </div>
       </UserContext>  
-
+  
         </div>
-      </div>
-    </TokenContext>
       
+      </div>
+    </TokenContext> */}
+      <NuevaEvidencia></NuevaEvidencia>
     </>
   )
 }
