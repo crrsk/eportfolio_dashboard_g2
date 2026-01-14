@@ -8,8 +8,8 @@ import { Tab } from "@mui/material"
 
 function NuevaEvidencia() {
     
-    const [raSelect,setRA]=useState('')
-    const [TAREAS,setTareas] = useState(tareasRA)
+    const [raSelect,setRA]=useState({})
+    const [TAREAS,setTareas] = useState(tareasRA.lista)
 
     function manejarEvidencias(ra){
         setRA(ra)
@@ -29,9 +29,9 @@ function NuevaEvidencia() {
                 <div className="evidencias">
                 <SelectorTareaRA tareas={TAREAS} manejarEvidencia={manejarEvidencias}></SelectorTareaRA>
                 <p></p>
-                <NuevaEvidenciaForm ra={raSelect} anadirEvidencia={anadirEvidencia}></NuevaEvidenciaForm>
+                <NuevaEvidenciaForm TAREA={raSelect} anadirEvidencia={anadirEvidencia}></NuevaEvidenciaForm>
                 </div>
-
+               {console.log(TAREAS)}
            </>
         )
     }

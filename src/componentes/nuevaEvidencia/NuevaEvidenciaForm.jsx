@@ -10,7 +10,7 @@ function NuevaEvidenciaForm(props) {
     const user=useContext(UserContext)
     const FORMINICIAL=
         {
-            tarea_id:props.ra.id,
+            tarea_id:props.TAREA.id,
             estudiante_id:user,
             url: "",
             descripcion: "",
@@ -20,7 +20,7 @@ function NuevaEvidenciaForm(props) {
 
    const manejarForm= handleSubmit((ra)=>{
         props.anadirEvidencia(ra)
-        reset()
+        reset(FORMINICIAL)
     }
     ) 
     return (
@@ -33,7 +33,7 @@ function NuevaEvidenciaForm(props) {
                         message:"Ingrese una url valida"
                 }})} helperText={errors.url?.message}/><br />
                 <br />
-                <TextField type="text" required variant="outlined" label="Observaciones" multiline minRows={5} fullWidth={true}/><br />
+                <TextField type="text" required variant="outlined" label="Observaciones" multiline minRows={5} fullWidth={true} {...register("descripcion")}/><br />
                 <br />
                 <Box sx={{display:'flex',justifyContent:'center'}}>
                     <Button type="submit" variant="contained" endIcon={<SendIcon></SendIcon>}>AÑADIR EVIDENCIA</Button>

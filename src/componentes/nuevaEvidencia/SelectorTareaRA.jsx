@@ -35,7 +35,7 @@ function SelectorTareaRA(props) {
                         label="Tarea"
                         onChange={handleChange}
                     >
-                        {tareas.lista.map(imprimeRA)}
+                        {tareas.map(imprimeRA)}
                     </Select>
                 </FormControl>
             </Box>

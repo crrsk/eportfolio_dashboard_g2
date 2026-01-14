@@ -38,7 +38,9 @@ function App() {
       
       </div>
     </TokenContext> */}
+     <UserContext value={user}>
       <NuevaEvidencia></NuevaEvidencia>
+    </UserContext>
     </>
   )
 }
