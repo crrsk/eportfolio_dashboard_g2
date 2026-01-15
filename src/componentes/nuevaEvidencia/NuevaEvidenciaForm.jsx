@@ -7,6 +7,7 @@ import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import SendIcon from '@mui/icons-material/Send';
 function NuevaEvidenciaForm(props) {
+    
     const user=useContext(UserContext)
     const FORMINICIAL=
         {

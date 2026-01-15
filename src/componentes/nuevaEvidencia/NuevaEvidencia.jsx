@@ -13,7 +13,6 @@ function NuevaEvidencia() {
 
     function manejarEvidencias(ra){
         setRA(ra)
-        return ra
     }
 
     function anadirEvidencia(ra){

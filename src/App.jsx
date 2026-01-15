@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-{/*     <TokenContext value={token}>
+    <TokenContext value={token}>
       <div className='container-fluid'>
         <div className="row">
 
@@ -31,16 +31,15 @@ function App() {
           </div>
           <div className='col-9 main'>
             <Main token={token} />
+            <NuevaEvidencia></NuevaEvidencia>
           </div>
       </UserContext>  
   
         </div>
       
       </div>
-    </TokenContext> */}
-     <UserContext value={user}>
-      <NuevaEvidencia></NuevaEvidencia>
-    </UserContext>
+    </TokenContext>
+
     </>
   )
 }

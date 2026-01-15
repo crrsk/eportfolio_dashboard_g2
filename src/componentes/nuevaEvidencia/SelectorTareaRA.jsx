@@ -10,7 +10,8 @@ import Select from '@mui/material/Select';
 
 function SelectorTareaRA(props) {
   
-        const [tarea, setTarea] = React.useState('');
+        const [tarea, setTarea] = React.useState({});
+        
 
         const handleChange = (event) => {
             setTarea(event.target.value);
