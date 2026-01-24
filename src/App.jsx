@@ -8,9 +8,10 @@ import Main from './componentes/Main'
 import TokenContext from './contexto/TokenContext'
 import UserContext from './contexto/UserContext'
 import NuevaEvidencia from './componentes/nuevaEvidencia/NuevaEvidencia'
+import MenuAcordeon from './componentes/Menu/MenuAcordeon'
 function App() {
 
- const usuario="Enrique"
+ const usuario="Victor"
  const token="dada78wda7w"
  const menu="menu"
  const[user,setUser]=useState(usuario)
@@ -28,6 +29,7 @@ function App() {
       <UserContext value={user}>    
          <div className='col-3 sideBar'>
             <SideBar menu={menu}/>
+            <MenuAcordeon></MenuAcordeon>
           </div>
           <div className='col-9 main'>
             <Main token={token} />
