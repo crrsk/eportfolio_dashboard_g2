@@ -22,9 +22,9 @@ function MenuAcordeon() {
     }
     function generarDetails(rol){
             if (rol=="docente"){      
-               return modulosImpartidos.lista.lista.map((a)=><Details nombre={a.nombre}></Details>) 
+               return modulosImpartidos.lista.lista.map((a)=><Details ruta={'/funcionalidaddocente/'+a.id} nombre={a.nombre}></Details>) 
             }else if(rol=="estudiante"){
-                return modulosMatriculados.lista.lista.map((a)=><Details nombre={a.nombre}></Details>)
+                return modulosMatriculados.lista.lista.map((a)=><Details ruta={'/funcionalidadestudiante/'+a.id} nombre={a.nombre}></Details>)
             }else if(rol=="administrador"){
                 return admin.map((a)=><Details ruta={a.ruta} nombre={a.nombre}></Details>)
             }

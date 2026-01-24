@@ -9,6 +9,9 @@ import TokenContext from './contexto/TokenContext'
 import UserContext from './contexto/UserContext'
 import NuevaEvidencia from './componentes/nuevaEvidencia/NuevaEvidencia'
 import MenuAcordeon from './componentes/Menu/MenuAcordeon'
+import FuncionalidadDocente from './paginas/FuncionalidadDocente'
+import { Route, Routes } from 'react-router-dom'
+import FuncionalidadEstudiante from './paginas/FuncionalidadEstudiante'
 function App() {
 
  const usuario="Victor"
@@ -33,7 +36,11 @@ function App() {
           </div>
           <div className='col-9 main'>
             <Main token={token} />
-            <NuevaEvidencia></NuevaEvidencia>
+            <Routes>
+              <Route path="/funcionalidadestudiante/:modulo" element={<FuncionalidadEstudiante></FuncionalidadEstudiante>}/>
+              <Route path="/funcionalidaddocente/:modulo" element={<FuncionalidadDocente></FuncionalidadDocente>}/>
+            </Routes>
+            
           </div>
       </UserContext>  
   

@@ -30,7 +30,7 @@ function NuevaEvidencia() {
                 <p></p>
                 <NuevaEvidenciaForm TAREA={raSelect} anadirEvidencia={anadirEvidencia}></NuevaEvidenciaForm>
                 </div>
-               {console.log(TAREAS)}
+               
            </>
         )
     }
