@@ -21,9 +21,8 @@ function MenuAcordeon() {
         return <Accordion><Summary rol={rol}></Summary>{generarDetails(rol)}</Accordion>
     }
     function generarDetails(rol){
-            if (rol=="docente"){
-                
-               return modulosImpartidos.lista.lista.map((a)=>{<Details ruta={ruta} nombre={a.nombre}></Details>}) 
+            if (rol=="docente"){      
+               return modulosImpartidos.lista.lista.map((a)=><Details nombre={a.nombre}></Details>) 
             }else if(rol=="estudiante"){
                 return modulosMatriculados.lista.lista.map((a)=><Details nombre={a.nombre}></Details>)
             }else if(rol=="administrador"){
