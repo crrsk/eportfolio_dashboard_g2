@@ -10,7 +10,7 @@ function NuevaEvidenciaForm(props) {
     
     const user=useContext(UserContext)
     const FORMINICIAL=
-        {
+        {   
             tarea_id:null,
             estudiante_id:null,
             url: "",
@@ -20,7 +20,7 @@ function NuevaEvidenciaForm(props) {
     const{register,reset,handleSubmit,watch,formState:{errors}}=useForm({defaultValues:FORMINICIAL})
 
    const manejarForm= handleSubmit((ra)=>{
-        ra.tarea_id=props.TAREA.id
+        ra.tarea_id =props.TAREA.id
         ra.estudiante_id=user
         props.anadirEvidencia(ra)
         reset(FORMINICIAL)

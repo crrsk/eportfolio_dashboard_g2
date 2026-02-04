@@ -3,4 +3,4 @@ function getTareasPorRA(){
         (response)=>{return (response.json())}
         ).catch((error)=>"Error")
 }
-export default getRoles;
+export default getTareasPorRA;

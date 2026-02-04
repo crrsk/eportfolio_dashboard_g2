@@ -7,6 +7,7 @@ function Cabecera(props) {
   return (
     <>
       <header>
+            <p>ENRIQUE</p>
             <h1>HEADER</h1>
             <p>{props.usuario}</p>
             <p>{token}</p> 

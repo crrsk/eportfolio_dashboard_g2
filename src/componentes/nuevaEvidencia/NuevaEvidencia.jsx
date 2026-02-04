@@ -11,12 +11,14 @@ function NuevaEvidencia() {
     const [raSelect,setRA]=useState({})
     const [TAREAS,setTareas] = useState(tareasRA.lista)
     const [evidencias,setEvidencias]=useState([])
+    
     function manejarEvidencias(ra){
         setRA(ra)
     }
 
     function anadirEvidencia(ra){
         setEvidencias([...evidencias,ra])
+        console.log(evidencias)
     }
 
    
