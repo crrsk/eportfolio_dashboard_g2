@@ -9,6 +9,7 @@ function useMisTareasPorRA(){
     function obtenerTareasPorRA(){
         setBuscando(true)
         getTareasPorRA().then((tareas)=>{
+            console.log(tareas," hook")
             setLista(tareas)
             setBuscando(false)
         })

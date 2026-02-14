@@ -1,5 +1,5 @@
 function getTareasPorRA(){
-    return fetch("http://eportfolio.test/api/v1/resultados-aprendizaje/1/tareas").then(
+    return fetch("https://mocki.io/v1/8a179952-0af2-4b9a-87e1-db8205864ad6").then(
         (response)=>{return (response.json())}
         ).catch((error)=>"Error")
 }

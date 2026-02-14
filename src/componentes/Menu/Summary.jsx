@@ -16,7 +16,7 @@ function Summary(props){
                     aria-controls="panel1-content"
                     id="panel1-header"
                 >
-                    <Typography component="span">{props.rol.nombre}</Typography>
+                    <Typography component="span">{props.rol.toUpperCase()}</Typography>
                 </AccordionSummary>
                 
     </>)

@@ -12,7 +12,8 @@ function useMisModulosImpartidos(){
     function obtenerModulosImpartidos(){
         setBuscando(true)
         getModulosImpartidos().then((modulos)=>{
-            setLista(modulos)
+            
+            setLista(modulos[user])
             setBuscando(false)
         })
     }

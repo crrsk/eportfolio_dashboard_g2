@@ -2,14 +2,14 @@
 import SelectorTareaRA from "./SelectorTareaRA"
 import NuevaEvidenciaForm from "./NuevaEvidenciaForm"
 //Import MOCKS
-import tareasRA from "../../mocks/mock-tareasRA"
 import { useState } from "react"
 import { Tab } from "@mui/material"
+import useMisTareasPorRA from "../../hooks/useMisTareasPorRA"
 
 function NuevaEvidencia() {
     
     const [raSelect,setRA]=useState({})
-    const [TAREAS,setTareas] = useState(tareasRA.lista)
+    const TAREAS = useMisTareasPorRA()
     const [evidencias,setEvidencias]=useState([])
     
     function manejarEvidencias(ra){
@@ -28,7 +28,7 @@ function NuevaEvidencia() {
         return (
             <>
                 <div className="evidencias">
-                <SelectorTareaRA tareas={TAREAS} manejarEvidencia={manejarEvidencias}></SelectorTareaRA>
+                <SelectorTareaRA tareas={TAREAS.lista} manejarEvidencia={manejarEvidencias}></SelectorTareaRA>
                 <p></p>
                 <NuevaEvidenciaForm TAREA={raSelect} anadirEvidencia={anadirEvidencia}></NuevaEvidenciaForm>
                 </div>

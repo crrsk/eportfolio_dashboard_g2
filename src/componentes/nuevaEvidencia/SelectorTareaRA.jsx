@@ -9,7 +9,7 @@ import Select from '@mui/material/Select';
 
 
 function SelectorTareaRA(props) {
-  
+
         const [tarea, setTarea] = React.useState({});
         
 
@@ -19,10 +19,10 @@ function SelectorTareaRA(props) {
         } 
 
         const tareas=props.tareas
-
+        
         function imprimeRA(ra){
             
-            return <MenuItem value={ra}>{ra.observaciones}</MenuItem>
+            return <MenuItem value={ra}>{ra.nombre}</MenuItem>
         }
     return (
         <>
@@ -36,7 +36,7 @@ function SelectorTareaRA(props) {
                         label="Tarea"
                         onChange={handleChange}
                     >
-                        {tareas.map(imprimeRA)}
+                        {tareas?.tareasRA?.map(imprimeRA)}
                     </Select>
                 </FormControl>
             </Box>

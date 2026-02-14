@@ -3,6 +3,7 @@ import UserContext from "../contexto/UserContext"
 import { Route, Routes } from "react-router-dom"
 import FuncionalidadEstudiante from "../paginas/FuncionalidadEstudiante"
 import FuncionalidadDocente from "../paginas/FuncionalidadDocente"
+import PaginaFamiliasProfesionales from "../paginas/PaginaFamiliasProfesionales"
 
 function Main(props) {
  
@@ -16,6 +17,7 @@ function Main(props) {
         <Routes>
             <Route path="/funcionalidadestudiante/:modulo" element={<FuncionalidadEstudiante></FuncionalidadEstudiante>}/>
             <Route path="/funcionalidaddocente/:modulo" element={<FuncionalidadDocente></FuncionalidadDocente>}/>
+            <Route path="/familiasprofesionales" element={<PaginaFamiliasProfesionales></PaginaFamiliasProfesionales>}/>
         </Routes>
     </main>
     

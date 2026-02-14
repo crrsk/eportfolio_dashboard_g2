@@ -13,23 +13,25 @@ function MenuAcordeon() {
     const modulosMatriculados=useMisModulosMatriculados()
     console.log("modulos",modulosImpartidos)
     const roles=useRoles()
+    
     function generarRoles(){
         console.log(roles)
-        if(roles.buscando && Array.isArray(roles.lista)){
+        if(!roles.buscando){
             
-        return  roles.lista.data?.map(generarSumario)
+        return  roles.lista?.roles?.map(generarSumario)
         }
 
     } 
 
     function generarSumario(rol){
-        return <Accordion><Summary key={rol.id} rol={rol}></Summary>{generarDetails(rol.nombre)}</Accordion>
+        
+        return <Accordion><Summary rol={rol}></Summary>{generarDetails(rol)}</Accordion>
     }
     function generarDetails(rol){
-            if (rol=="docente"){      
-               return modulosImpartidos.lista.data.map((a)=><Details ruta={'/funcionalidaddocente/'+a.id} nombre={a.nombre}></Details>) 
-            }else if(rol=="estudiante"){
-                return modulosMatriculados.lista.data.map((a)=><Details ruta={'/funcionalidadestudiante/'+a.id} nombre={a.nombre}></Details>)
+            if (rol=="docente" && !modulosImpartidos?.buscando){      
+               return modulosImpartidos.lista?.lista?.map((a)=><Details ruta={'/funcionalidaddocente/'+a.id} nombre={a.nombre}></Details>) 
+            }else if(rol=="estudiante" && !modulosMatriculados?.buscando){
+                return modulosMatriculados.lista?.lista?.map((a)=><Details ruta={'/funcionalidadestudiante/'+a.id} nombre={a.nombre}></Details>)
             }else if(rol=="administrador"){
                 return admin.map((a)=><Details ruta={a.ruta} nombre={a.nombre}></Details>)
             }

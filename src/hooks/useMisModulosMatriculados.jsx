@@ -12,7 +12,7 @@ function MisModulosMatriculados(){
     function obtenerModulosMatriculados(){
         setBuscando(true)
         getModulosMatriculados().then((modulos)=>{
-            setLista(modulos)
+            setLista(modulos[user])
             setBuscando(false)
         })
     }

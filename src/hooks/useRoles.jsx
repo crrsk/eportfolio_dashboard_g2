@@ -8,12 +8,12 @@ function useRoles(){
     const user=useContext(UserContext)
     
     const [buscando,setBuscando]=useState(false);
-    const [lista,setLista]=useState([])
+    const [lista,setLista]=useState()
     
     function obtenerRoles(){
         setBuscando(true)
         getRoles().then((roles)=>{
-            setLista(roles)
+            setLista(roles[user])
             setBuscando(false)
         })
     }
